@@ -12,3 +12,10 @@ wp-content/cache/
 wp-content/backups/
 sitemap.xml
 sitemap.xml.gz
+css/.DS_Store
+
+js/.DS_Store
+
+images/.DS_Store
+
+.DS_Store
