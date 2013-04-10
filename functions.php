@@ -43,7 +43,9 @@ function themedy_post_carousel() {
 		} 
 	}
 
-//Registration Users
+/*-------------------------------------------------*/
+// Users Registration and Login pages
+/*-------------------------------------------------*/
 add_action( 'wpmem_post_register_data', 'changeFields');
 add_action( 'wpmem_post_update_data', 'changeFields');
 
@@ -54,6 +56,7 @@ function changeFields( $fields )
 	
 	update_user_meta( $id, 'dbem_bday', $newDate );
 }
+
 function datasql($databr) {
 	if (!empty($databr)){
 	$p_dt = explode('/',$databr);
@@ -62,15 +65,55 @@ function datasql($databr) {
 	}
 }
 
+add_action('init','possibly_redirect');
+function possibly_redirect(){
+	global $pagenow;
+	if( 'wp-login.php' == $pagenow ) {
+		wp_redirect(site_url('login', 'login'));
+		exit();
+	}	
+}
+//register url fix
+add_filter('register','fix_register_url');
+function fix_register_url($link){
+    return str_replace(site_url('wp-login.php?action=register', 'login'),site_url('usuario/cadastro', 'login'),$link);
+}
+ 
+//login url fix
+add_filter('login_url','fix_login_url');
+function fix_login_url($link){
+    return str_replace(site_url('wp-login.php', 'login'),site_url('login', 'login'),$link);
 
-//Events
+}
+ 
+//forgot password url fix
+add_filter('lostpassword_url','fix_lostpass_url');
+function fix_lostpass_url($link){
+    return str_replace('?action=lostpassword','',str_replace(network_site_url('wp-login.php', 'login'),site_url('recuperar-senha?a=pwdreset', 'login'),$link));
+}
+
+add_filter('site_url','fix_urls',10,3);
+function fix_urls($url, $path, $orig_scheme){
+    if ($orig_scheme !== 'login')
+        return $url;
+    if ($path == 'wp-login.php?action=register')
+        return site_url('usuario/cadastro', 'login');
+ 
+    return $url;
+}
+
+/*-------------------------------------------------*/
+// Events Pages
+/*-------------------------------------------------*/
 // remove_action( 'show_user_profile', array('EM_User_Fields','show_profile_fields'), 1 );
 // remove_action( 'edit_user_profile', array('EM_User_Fields','show_profile_fields'), 1 );
 // remove_action( 'personal_options_update', array('EM_User_Fields','save_profile_fields') );
 // remove_action( 'edit_user_profile_update', array('EM_User_Fields','save_profile_fields') );
 
 
-//Commerce
+/*-------------------------------------------------*/
+// E-commerce pages
+/*-------------------------------------------------*/
 add_theme_support( 'genesis-connect-woocommerce' );
 
 

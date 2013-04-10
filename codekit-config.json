@@ -31,35 +31,15 @@
       "outputAbbreviatedPath" : "\/js\/videos-ck.js",
       "fileType" : 64
     },
-    "\/home.php" : {
+    "\/js\/jwplayer_old.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/home.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/js\/jquery.jplayer.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.jplayer.min.js",
+      "inputAbbreviatedPath" : "\/js\/jwplayer_old.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.jplayer.min-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/jquery.validate.pt-br.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.validate.pt-br.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.validate.pt-br-ck.js",
+      "outputAbbreviatedPath" : "\/js\/jwplayer_old-ck.js",
       "fileType" : 64
     },
     "\/images\/wrench.png" : {
@@ -73,16 +53,36 @@
       "initialSize" : 298,
       "fileType" : 8192
     },
-    "\/js\/jwplayer_old.js" : {
+    "\/js\/jquery.validate.pt-br.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jwplayer_old.js",
+      "inputAbbreviatedPath" : "\/js\/jquery.validate.pt-br.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jwplayer_old-ck.js",
+      "outputAbbreviatedPath" : "\/js\/jquery.validate.pt-br-ck.js",
       "fileType" : 64
+    },
+    "\/js\/jquery.jplayer.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.jplayer.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.jplayer.min-ck.js",
+      "fileType" : 64
+    },
+    "\/home.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/home.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/icon-dot.png" : {
       "ignoreWasSetByUser" : 0,
@@ -268,17 +268,6 @@
       "initialSize" : 2906,
       "fileType" : 8192
     },
-    "\/images\/ui-bg_flat_0_aaaaaa_40x100.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
-      "initialSize" : 149,
-      "fileType" : 8192
-    },
     "\/js\/jquery.countdown-pt-BR.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -289,6 +278,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/jquery.countdown-pt-BR-ck.js",
       "fileType" : 64
+    },
+    "\/images\/ui-bg_flat_0_aaaaaa_40x100.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+      "initialSize" : 149,
+      "fileType" : 8192
     },
     "\/js\/jquery.countdown.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -343,6 +343,15 @@
       "initialSize" : 493,
       "fileType" : 8192
     },
+    "\/archive.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/archive.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/images\/slogan_gruponews.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -353,15 +362,6 @@
       "outputAbbreviatedPath" : "\/images\/slogan_gruponews.png",
       "initialSize" : 2477,
       "fileType" : 8192
-    },
-    "\/archive.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/archive.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/js\/jquery.countdown.css" : {
       "ignoreWasSetByUser" : 0,
@@ -405,15 +405,15 @@
       "initialSize" : 102043,
       "fileType" : 8192
     },
-    "\/images\/warning.png" : {
+    "\/images\/twitter-nav.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/warning.png",
+      "inputAbbreviatedPath" : "\/images\/twitter-nav.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/warning.png",
-      "initialSize" : 298,
+      "outputAbbreviatedPath" : "\/images\/twitter-nav.png",
+      "initialSize" : 830,
       "fileType" : 8192
     },
     "\/js\/jquery.validate.js" : {
@@ -427,15 +427,26 @@
       "outputAbbreviatedPath" : "\/js\/jquery.validate-ck.js",
       "fileType" : 64
     },
-    "\/images\/twitter-nav.png" : {
+    "\/images\/warning.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/twitter-nav.png",
+      "inputAbbreviatedPath" : "\/images\/warning.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/twitter-nav.png",
-      "initialSize" : 830,
+      "outputAbbreviatedPath" : "\/images\/warning.png",
+      "initialSize" : 298,
+      "fileType" : 8192
+    },
+    "\/screenshot.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/screenshot.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/screenshot.png",
+      "initialSize" : 27650,
       "fileType" : 8192
     },
     "\/images\/innerbg.jpg" : {
@@ -448,17 +459,6 @@
       "outputAbbreviatedPath" : "\/images\/innerbg.jpg",
       "initialSize" : 450,
       "fileType" : 4096
-    },
-    "\/screenshot.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/screenshot.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/screenshot.png",
-      "initialSize" : 27650,
-      "fileType" : 8192
     },
     "\/images\/accept.png" : {
       "ignoreWasSetByUser" : 0,
