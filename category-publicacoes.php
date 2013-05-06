@@ -1,5 +1,5 @@
 <?php /* 
-Template Name: Archive Page
+Template Name: Archive Page - Publicações
 */ 
 
 //remove_action( 'genesis_before_post_content', 'genesis_post_info' );
@@ -16,22 +16,25 @@ function special_loop() {?>
 	<?php
 	if (have_posts()) :
 		while (have_posts()) : the_post();
-		include (STYLESHEETPATH  . '/functions-layout.php');
+		include (STYLESHEETPATH . '/functions-layout.php');
 	?>
 	<div <?php post_class('clearfix'); ?> >
+		<?php 
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail('publicacoes');
+			} 
+		?>
 		<div class="details-info">
 			<h3 class="entry-title"><a href="<?php echo post_permalink(); ?>"> <?php the_title(); ?></a></h3>	
 			<?php 
-				the_excerpt();
-				$post_info = __( 'By', 'genesis' ) .' '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' | '.  get_the_term_list( $post->ID, 'tipo', ' ' ,', ') . ' [post_edit]';
+				$post_info =  '[post_edit]';
 				printf( '<div class="post-info">%s</div>', apply_filters( 'genesis_post_info', $post_info ) );
-				
 			?>
 		</div>
 	</div>
 	<?php
 	 endwhile;
-	 genesis_numeric_posts_nav();
+ 	 genesis_numeric_posts_nav();
 endif;
 }
 

@@ -59,8 +59,24 @@ function loop_audioevideo_single() {
 						height: "15"
 					});
 				</script>
-				<?php } ?>
-		</div>
+				<?php } 
+										
+					function add_post_content($content) {
+							$linksContent = '';
+							$linkAudio = '';
+							$linkAnnotations = '';
+							if ( $lnk_annotations != '' ) {
+								$linkAnnotations = '<li><a href="'. $lnk_annotations .'">Anotação/Apresentação (PDF)</a></li>';
+							};
+							if ( $lnk_audio != '' ) {
+								$linkAudio = '<li><a href="'. $lnk_audio .'">Download MP3</a></li>';
+							}
+							$content .= '<div class="details-link"><ul>'.$linkAnnotations.$lnk_audio.'</ul></div>'; ?>
+						<?php   return $content;
+					}
+					add_filter('the_content', 'add_post_content');
+					
+				?>
 		<div class="details-info">
 			<h1 class="entry-title"><?php the_title(); ?></h1>	
 			<?php 
@@ -69,7 +85,9 @@ function loop_audioevideo_single() {
 				the_content();	
 			?>
 		</div>
-		<div class="details-link">
+		
+		<!--
+<div class="details-link">
 			<ul>
 			<?php
 				if ($lnk_annotations != "" ) { ?>
@@ -82,6 +100,7 @@ function loop_audioevideo_single() {
 				}
 			?>	
 			</ul>
+-->
 		</div>
 	</div>
 	<?php

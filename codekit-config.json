@@ -2,57 +2,6 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8283",
   "files" : {
-    "\/clean.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/clean.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/functions.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/js\/videos.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/videos.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/videos-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/jwplayer_old.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jwplayer_old.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jwplayer_old-ck.js",
-      "fileType" : 64
-    },
-    "\/images\/wrench.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/wrench.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/wrench.png",
-      "initialSize" : 298,
-      "fileType" : 8192
-    },
     "\/js\/jquery.validate.pt-br.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -64,230 +13,35 @@
       "outputAbbreviatedPath" : "\/js\/jquery.validate.pt-br-ck.js",
       "fileType" : 64
     },
-    "\/js\/jquery.jplayer.min.js" : {
+    "\/conferencia2008\/images\/fundo1.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.jplayer.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.jplayer.min-ck.js",
-      "fileType" : 64
-    },
-    "\/home.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/home.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/images\/icon-dot.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/icon-dot.png",
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/fundo1.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/icon-dot.png",
-      "initialSize" : 108,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/fundo1.png",
+      "initialSize" : 3609,
       "fileType" : 8192
     },
-    "\/css\/jquery-ui.css" : {
+    "\/js\/jquery.countdown.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/jquery-ui.css",
+      "inputAbbreviatedPath" : "\/js\/jquery.countdown.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/js\/commons.js" : {
+    "\/screenshot.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/commons.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/commons-ck.js",
-      "fileType" : 64
-    },
-    "\/css\/page_style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/page_style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/images\/2cl.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/2cl.png",
+      "inputAbbreviatedPath" : "\/screenshot.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/2cl.png",
-      "initialSize" : 2905,
-      "fileType" : 8192
-    },
-    "\/archive-audioevideo.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/archive-audioevideo.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/single-audioevideo.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/single-audioevideo.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/js\/jwplayer.html5.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jwplayer.html5.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jwplayer.html5-ck.js",
-      "fileType" : 64
-    },
-    "\/page-users.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/page-users.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/images\/3cm.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/3cm.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/3cm.png",
-      "initialSize" : 2934,
-      "fileType" : 8192
-    },
-    "\/js\/jwplayer.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jwplayer.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jwplayer-ck.js",
-      "fileType" : 64
-    },
-    "\/images\/icon_option.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/icon_option.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/icon_option.png",
-      "initialSize" : 989,
-      "fileType" : 8192
-    },
-    "\/images\/3cr.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/3cr.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/3cr.png",
-      "initialSize" : 2951,
-      "fileType" : 8192
-    },
-    "\/images\/arrow-right.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/arrow-right.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/arrow-right.png",
-      "initialSize" : 206,
-      "fileType" : 8192
-    },
-    "\/js\/jquery.fitvids.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.fitvids.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.fitvids-ck.js",
-      "fileType" : 64
-    },
-    "\/page-webtv.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/page-webtv.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/images\/2cr.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/2cr.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/2cr.png",
-      "initialSize" : 2906,
-      "fileType" : 8192
-    },
-    "\/js\/jquery.countdown-pt-BR.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.countdown-pt-BR.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.countdown-pt-BR-ck.js",
-      "fileType" : 64
-    },
-    "\/images\/ui-bg_flat_0_aaaaaa_40x100.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
-      "initialSize" : 149,
+      "outputAbbreviatedPath" : "\/screenshot.png",
+      "initialSize" : 27650,
       "fileType" : 8192
     },
     "\/js\/jquery.countdown.min.js" : {
@@ -301,87 +55,83 @@
       "outputAbbreviatedPath" : "\/js\/jquery.countdown.min-ck.js",
       "fileType" : 64
     },
-    "\/images\/footer-top.png" : {
+    "\/pagina_conferencia2010.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/footer-top.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/footer-top.png",
-      "initialSize" : 146,
-      "fileType" : 8192
-    },
-    "\/functions-layout.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/functions-layout.php",
+      "inputAbbreviatedPath" : "\/pagina_conferencia2010.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/logo_gruponews.png" : {
+    "\/page-users.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/logo_gruponews.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/logo_gruponews.png",
-      "initialSize" : 2621,
-      "fileType" : 8192
-    },
-    "\/images\/rss.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/rss.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/rss.png",
-      "initialSize" : 493,
-      "fileType" : 8192
-    },
-    "\/archive.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/archive.php",
+      "inputAbbreviatedPath" : "\/page-users.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/slogan_gruponews.png" : {
+    "\/js\/commons-ck.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/commons-ck.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/commons-ck-ck.js",
+      "fileType" : 64
+    },
+    "\/images\/apple-touch-icon-72x72-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/slogan_gruponews.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/slogan_gruponews.png",
-      "initialSize" : 2477,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-72x72-precomposed.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-72x72-precomposed.png",
+      "initialSize" : 854,
       "fileType" : 8192
     },
-    "\/js\/jquery.countdown.css" : {
+    "\/plugins\/events-manager\/templates\/events-list.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.countdown.css",
+      "inputAbbreviatedPath" : "\/plugins\/events-manager\/templates\/events-list.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/images\/apple-touch-icon-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-precomposed.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-precomposed.png",
+      "initialSize" : 730,
+      "fileType" : 8192
+    },
+    "\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/style.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/js\/tinynav.min.js" : {
+    "\/archive-audioevideo.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/tinynav.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/tinynav.min-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/archive-audioevideo.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/arrow-down.png" : {
       "ignoreWasSetByUser" : 0,
@@ -394,60 +144,244 @@
       "initialSize" : 197,
       "fileType" : 8192
     },
+    "\/js\/jwplayer.html5.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jwplayer.html5.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jwplayer.html5-ck.js",
+      "fileType" : 64
+    },
+    "\/conferencia2010\/js\/penumbra.font.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/js\/penumbra.font.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/conferencia2010\/js\/penumbra.font-ck.js",
+      "fileType" : 64
+    },
+    "\/conferencia2008\/images\/tv.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/tv.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/tv.jpg",
+      "initialSize" : 6586,
+      "fileType" : 4096
+    },
+    "\/pagina_igrejanoslares.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/pagina_igrejanoslares.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/home.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/home.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/images\/apple-touch-icon-512x512-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-512x512-precomposed.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-512x512-precomposed.png",
+      "initialSize" : 143781,
+      "fileType" : 8192
+    },
+    "\/images\/icon-dot.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/icon-dot.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/icon-dot.png",
+      "initialSize" : 108,
+      "fileType" : 8192
+    },
+    "\/conferencia2009\/css\/sIFR-screen.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/css\/sIFR-screen.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/rsi\/images\/fundo.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/rsi\/images\/fundo.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/rsi\/images\/fundo.png",
+      "initialSize" : 167,
+      "fileType" : 8192
+    },
+    "\/images\/3cm.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/3cm.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/3cm.png",
+      "initialSize" : 2934,
+      "fileType" : 8192
+    },
+    "\/rsi\/images\/img_fundo.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/rsi\/images\/img_fundo.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/rsi\/images\/img_fundo.jpg",
+      "initialSize" : 343447,
+      "fileType" : 4096
+    },
     "\/images\/retina_wood.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/images\/retina_wood.png",
-      "processed" : 0,
+      "processed" : 1,
       "outputAbbreviatedPath" : "\/images\/retina_wood.png",
       "initialSize" : 102043,
       "fileType" : 8192
     },
-    "\/images\/twitter-nav.png" : {
+    "\/conferencia2009\/images\/topo_02.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/twitter-nav.png",
+      "inputAbbreviatedPath" : "\/conferencia2009\/images\/topo_02.jpg",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/twitter-nav.png",
-      "initialSize" : 830,
+      "outputAbbreviatedPath" : "\/conferencia2009\/images\/topo_02.jpg",
+      "initialSize" : 56790,
+      "fileType" : 4096
+    },
+    "\/images\/rss.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/rss.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/rss.png",
+      "initialSize" : 493,
       "fileType" : 8192
     },
-    "\/js\/jquery.validate.js" : {
+    "\/conferencia2008\/images\/logotipo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.validate.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.validate-ck.js",
-      "fileType" : 64
-    },
-    "\/images\/warning.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/warning.png",
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/logotipo.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/warning.png",
-      "initialSize" : 298,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/logotipo.png",
+      "initialSize" : 10472,
       "fileType" : 8192
     },
-    "\/screenshot.png" : {
+    "\/page-webtv.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/screenshot.png",
+      "inputAbbreviatedPath" : "\/page-webtv.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/images\/icon_option.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/icon_option.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/screenshot.png",
-      "initialSize" : 27650,
+      "outputAbbreviatedPath" : "\/images\/icon_option.png",
+      "initialSize" : 989,
       "fileType" : 8192
+    },
+    "\/conferencia2008\/images\/tituloAcompanhe.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/tituloAcompanhe.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/tituloAcompanhe.jpg",
+      "initialSize" : 2664,
+      "fileType" : 4096
+    },
+    "\/images\/2cr.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/2cr.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/2cr.png",
+      "initialSize" : 2906,
+      "fileType" : 8192
+    },
+    "\/search.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/search.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/images\/accept.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/accept.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/accept.png",
+      "initialSize" : 2846,
+      "fileType" : 8192
+    },
+    "\/css\/jquery-ui.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/jquery-ui.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/archive.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/archive.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/innerbg.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -460,16 +394,660 @@
       "initialSize" : 450,
       "fileType" : 4096
     },
-    "\/images\/accept.png" : {
+    "\/conferencia2009\/images\/mapa.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/accept.png",
+      "inputAbbreviatedPath" : "\/conferencia2009\/images\/mapa.jpg",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/accept.png",
-      "initialSize" : 2846,
+      "outputAbbreviatedPath" : "\/conferencia2009\/images\/mapa.jpg",
+      "initialSize" : 245572,
+      "fileType" : 4096
+    },
+    "\/conferencia2009\/js\/sifr-addons.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/js\/sifr-addons.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/conferencia2009\/js\/sifr-addons-ck.js",
+      "fileType" : 64
+    },
+    "\/images\/apple-touch-icon.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon.png",
+      "initialSize" : 730,
       "fileType" : 8192
+    },
+    "\/conferencia2010\/css\/sIFR-print.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/css\/sIFR-print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2008\/images\/tituloAovivo.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/tituloAovivo.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/tituloAovivo.jpg",
+      "initialSize" : 1496,
+      "fileType" : 4096
+    },
+    "\/js\/jquery.countdown-pt-BR.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.countdown-pt-BR.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.countdown-pt-BR-ck.js",
+      "fileType" : 64
+    },
+    "\/conferencia2008\/images\/tituloOsPalestrantes.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/tituloOsPalestrantes.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/tituloOsPalestrantes.jpg",
+      "initialSize" : 2248,
+      "fileType" : 4096
+    },
+    "\/rsi\/css\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/rsi\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2008\/images\/tituloInscricoes.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/tituloInscricoes.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/tituloInscricoes.jpg",
+      "initialSize" : 1643,
+      "fileType" : 4096
+    },
+    "\/less\/build\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/build\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/page-conferencia2008.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/page-conferencia2008.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/rsi\/images\/topo.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/rsi\/images\/topo.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/rsi\/images\/topo.jpg",
+      "initialSize" : 40003,
+      "fileType" : 4096
+    },
+    "\/images\/twitter-nav.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/twitter-nav.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/twitter-nav.png",
+      "initialSize" : 830,
+      "fileType" : 8192
+    },
+    "\/js\/jwplayer.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jwplayer.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jwplayer-ck.js",
+      "fileType" : 64
+    },
+    "\/category-publicacoes.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/category-publicacoes.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/editor-style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/editor-style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2010\/js\/cufon-yui.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/js\/cufon-yui.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/conferencia2010\/js\/cufon-yui-ck.js",
+      "fileType" : 64
+    },
+    "\/rsi\/css\/print.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/rsi\/css\/print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2008\/images\/mapa.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/mapa.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/mapa.jpg",
+      "initialSize" : 245572,
+      "fileType" : 4096
+    },
+    "\/js\/tinynav.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/tinynav.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/tinynav.min-ck.js",
+      "fileType" : 64
+    },
+    "\/less\/style.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/less\/style.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/build\/style.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/images\/logo_gruponews.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/logo_gruponews.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/logo_gruponews.png",
+      "initialSize" : 2621,
+      "fileType" : 8192
+    },
+    "\/page-conferencia2009.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/page-conferencia2009.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/conferencia2008\/css\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2010\/images\/mapa.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/images\/mapa.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2010\/images\/mapa.jpg",
+      "initialSize" : 245572,
+      "fileType" : 4096
+    },
+    "\/js\/jquery.validate.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.validate.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.validate-ck.js",
+      "fileType" : 64
+    },
+    "\/images\/apple-touch-icon-144x144-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-144x144-precomposed.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-144x144-precomposed.png",
+      "initialSize" : 1475,
+      "fileType" : 8192
+    },
+    "\/css\/page_style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/page_style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2009\/images\/topo.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/images\/topo.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2009\/images\/topo.jpg",
+      "initialSize" : 113048,
+      "fileType" : 4096
+    },
+    "\/images\/3cr.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/3cr.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/3cr.png",
+      "initialSize" : 2951,
+      "fileType" : 8192
+    },
+    "\/conferencia2010\/js\/sifr.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/js\/sifr.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/conferencia2010\/js\/sifr-ck.js",
+      "fileType" : 64
+    },
+    "\/images\/wrench.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/wrench.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/wrench.png",
+      "initialSize" : 298,
+      "fileType" : 8192
+    },
+    "\/images\/2cl.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/2cl.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/2cl.png",
+      "initialSize" : 2905,
+      "fileType" : 8192
+    },
+    "\/images\/footer-top.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/footer-top.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/footer-top.png",
+      "initialSize" : 146,
+      "fileType" : 8192
+    },
+    "\/js\/videos.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/videos.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/videos-ck.js",
+      "fileType" : 64
+    },
+    "\/conferencia2009\/images\/topo_01.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/images\/topo_01.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2009\/images\/topo_01.jpg",
+      "initialSize" : 58912,
+      "fileType" : 4096
+    },
+    "\/images\/apple-touch-icon-57x57-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-57x57-precomposed.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-57x57-precomposed.png",
+      "initialSize" : 730,
+      "fileType" : 8192
+    },
+    "\/images\/arrow-right.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/arrow-right.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/arrow-right.png",
+      "initialSize" : 206,
+      "fileType" : 8192
+    },
+    "\/single-audioevideo.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/single-audioevideo.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/conferencia2009\/images\/grafismo.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/images\/grafismo.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2009\/images\/grafismo.jpg",
+      "initialSize" : 3270,
+      "fileType" : 4096
+    },
+    "\/images\/warning.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/warning.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/warning.png",
+      "initialSize" : 298,
+      "fileType" : 8192
+    },
+    "\/functions-layout.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions-layout.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/functions.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/functions.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/js\/commons.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/commons.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/commons-ck.js",
+      "fileType" : 64
+    },
+    "\/conferencia2008\/images\/fundo2.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/fundo2.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/fundo2.png",
+      "initialSize" : 3605,
+      "fileType" : 8192
+    },
+    "\/images\/apple-touch-icon-114x114-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-114x114-precomposed.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-114x114-precomposed.png",
+      "initialSize" : 1189,
+      "fileType" : 8192
+    },
+    "\/conferencia2010\/css\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/js\/jwplayer_old.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jwplayer_old.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jwplayer_old-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/jquery.fitvids.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.fitvids.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.fitvids-ck.js",
+      "fileType" : 64
+    },
+    "\/single.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/single.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/conferencia2010\/css\/sIFR-screen.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/css\/sIFR-screen.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2008\/images\/tituloAconferencia.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/tituloAconferencia.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/tituloAconferencia.jpg",
+      "initialSize" : 2138,
+      "fileType" : 4096
+    },
+    "\/conferencia2009\/css\/sIFR-print.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/css\/sIFR-print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2010\/images\/topo.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/images\/topo.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2010\/images\/topo.jpg",
+      "initialSize" : 101343,
+      "fileType" : 4096
+    },
+    "\/conferencia2010\/js\/sifr-addons.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/js\/sifr-addons.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/conferencia2010\/js\/sifr-addons-ck.js",
+      "fileType" : 64
+    },
+    "\/images\/ui-bg_flat_0_aaaaaa_40x100.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+      "initialSize" : 149,
+      "fileType" : 8192
+    },
+    "\/js\/jquery.jplayer.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.jplayer.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.jplayer.min-ck.js",
+      "fileType" : 64
+    },
+    "\/conferencia2009\/js\/sifr.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/js\/sifr.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/conferencia2009\/js\/sifr-ck.js",
+      "fileType" : 64
+    },
+    "\/images\/slogan_gruponews.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/slogan_gruponews.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/slogan_gruponews.png",
+      "initialSize" : 2477,
+      "fileType" : 8192
+    },
+    "\/newsletter\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/newsletter\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/conferencia2009\/css\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2009\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/single-publicacoes.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/single-publicacoes.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/conferencia2008\/images\/tituloFolder.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2008\/images\/tituloFolder.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/conferencia2008\/images\/tituloFolder.jpg",
+      "initialSize" : 1357,
+      "fileType" : 4096
     }
   },
   "manualImportLinks" : [
@@ -498,7 +1076,7 @@
     "autoSyncProjectSettingsFile" : 1,
     "lessAutoOutputPathReplace1" : "less",
     "jadeAutoOutputPathReplace1" : "",
-    "lessAutoOutputPathRelativePath" : "..\/css",
+    "lessAutoOutputPathRelativePath" : "build\/",
     "hamlAutoOutputPathRelativePath" : "",
     "jsCheckerReservedNamesString" : "",
     "javascriptOutputStyle" : 1,
@@ -654,7 +1232,7 @@
   "projectAttributes" : {
     "bourbonEnabled" : 0,
     "displayValue" : "gruponews",
-    "displayValueWasSetByUser" : 0,
+    "displayValueWasSetByUser" : 1,
     "compassEnabled" : 0
   }
 }

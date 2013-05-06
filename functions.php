@@ -4,10 +4,35 @@ require_once(TEMPLATEPATH.'/lib/init.php');
 
 
 /** Add Viewport meta tag for mobile browsers */
+// This theme styles the visual editor with editor-style.css to match the theme style.
+add_editor_style();
+// Add the Style Dropdown Menu to the second row of visual editor buttons
+function my_mce_buttons_2($buttons)
+{
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+}
+add_filter('mce_buttons_2', 'my_mce_buttons_2');
+function my_mce_before_init($init_array)
+	{
+		// Now we add classes with title and separate them with;
+		$init_array['theme_advanced_styles'] = "Notas=notes;PeBio=pebio";
+	return $init_array;
+}
+
+add_filter('tiny_mce_before_init', 'my_mce_before_init');
+
+
+
 add_action( 'genesis_meta', 'add_viewport_meta_tag' );
 add_action('genesis_before', 'facebook_sdk');
 remove_action('genesis_before_loop', 'genesis_do_breadcrumbs');
 add_action('genesis_before_loop', 'breadcrumb_new');
+/** Load custom favicon to header */
+add_filter( 'genesis_pre_load_favicon', 'custom_favicon_filter' );
+function custom_favicon_filter( $favicon_url ) {
+    return '/favicon.ico';
+}
 function add_viewport_meta_tag() {
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
 }
@@ -42,6 +67,51 @@ function themedy_post_carousel() {
 			endif;
 		} 
 	}
+	
+// 
+add_filter('genesis_before_post_title', 'add_content_featured');
+
+function add_content_featured() {
+	if ( has_post_thumbnail() ) {
+		if ( in_category( 'publicacoes' ) == true) {
+			the_post_thumbnail('publicacoes');				
+		} else {
+			the_post_thumbnail('materia');	
+		}
+	}
+}
+
+//Troca no rss, o nome do autor
+
+add_filter('the_author', 'guest_author_name');
+add_filter('get_the_author_display_name', 'guest_author_name');
+
+function guest_author_name($name) {
+	global $post;
+	
+	$name = get_the_term_list( $post->ID, 'autor', ' ' ,', ');
+
+	return $name;
+}
+
+/** Customize the post info function */
+add_filter( 'genesis_post_info', 'post_info_filter' );
+function post_info_filter($post_info) {
+if ( !is_page() ) {
+    $post_info = '[post_date] por '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' [post_comments] [post_edit]';
+    return $post_info;
+}}
+
+/** Remove the post meta function */
+remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+
+//Edit footer
+add_filter('genesis_footer_creds_text', 'footer_creds_filter');
+function footer_creds_filter( $creds ) {
+    $creds = '[footer_copyright] &middot; <a href="//www.gruponews.com.br/">GrupoNews</a>';
+    return $creds;
+}
+
 
 /*-------------------------------------------------*/
 // Users Registration and Login pages
@@ -64,7 +134,7 @@ function datasql($databr) {
 	return $data_sql;
 	}
 }
-
+/*
 add_action('init','possibly_redirect');
 function possibly_redirect(){
 	global $pagenow;
@@ -101,6 +171,7 @@ function fix_urls($url, $path, $orig_scheme){
  
     return $url;
 }
+*/
 
 /*-------------------------------------------------*/
 // Events Pages
@@ -197,10 +268,11 @@ fjs.parentNode.insertBefore(js, fjs);
 // Thumbs
 /*-------------------------------------------------*/
 
-genesis_add_image_size('home-destaque-maior', 960, 353, true);
-genesis_add_image_size('home-destaque-medio', 191, 185, true);
-genesis_add_image_size('video-thumb', 185, 104, true);
-genesis_add_image_size('materia', 580, 213, true);
+add_image_size('home-destaque-maior', 960, 353, true);
+add_image_size('home-destaque-medio', 191, 185, true);
+add_image_size('video-thumb', 185, 104, true);
+add_image_size('materia', 580, 213, true);
+add_image_size('publicacoes', 185, 204);
 
 
 /*-------------------------------------------------*/
@@ -219,6 +291,16 @@ genesis_register_sidebar(array(
 	'name' 			=> 'Top Featured Area', 
 	'id' 			=> 'top-featured-area',
 	'description' 	=> 'This is the top featured area above all content.', 
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' 	=> '</div>',
+	'before_title' 	=> '<h3>', 
+	'after_title' 	=> '</h3>'
+	));
+
+genesis_register_sidebar(array(
+	'name' 			=> 'Sidebar Home', 
+	'id' 			=> 'sidebar-home',
+	'description' 	=> 'Sidebar just show in homepage', 
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' 	=> '</div>',
 	'before_title' 	=> '<h3>', 

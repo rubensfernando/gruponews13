@@ -1,13 +1,11 @@
-/*
+/*!
     Theme Name: GrupoNews 2013
     Theme URI: http://www.yourdomain.com/
     Description: This is a sample child theme created for the Genesis Framework.
     Author: Rubens Fernando
     Author URI: http://www.rubensfernando.com/
  
-    Version: 1.0
- 
-    Tags: custom-background, custom-header, featured-images, threaded-comments, two-columns
+    Version: 1.0 Beta
  
     Template: genesis
     Template Version: 1.8
@@ -60,6 +58,7 @@
 * Responsive Design
 
 */
+
 
 
 /* Import Fonts
@@ -143,7 +142,7 @@ ol li {
 a,
 a:visited {
 	color: #400D02;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -610,7 +609,9 @@ ul.menu li.sfHover ul,
 .post {
 	margin: 0 0 40px;
 }
-
+.post .wp-post-image {
+	margin: 0 0 15px;
+}
 .entry-content {
 	overflow: hidden;
 }
@@ -658,6 +659,12 @@ p.subscribe-to-comments {
 .post-type-archive-audioevideo .type-audioevideo img {
 	float: left;
 	margin-right: 15px;
+	margin-bottom: 12%;
+}
+
+.post-type-archive-audioevideo .type-audioevideo .details-info {
+	display: block;
+	width: 100%;
 }
 
 .post-type-archive-audioevideo .type-audioevideo .post-info {
@@ -706,6 +713,40 @@ p.subscribe-to-comments {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
+/* Page Publications
+------------------------------------------------------------ */
+
+
+.archive .category-publicacoes {
+	float: left;
+	margin-left: 3%;
+	width: 47%;
+}
+.archive  .category-publicacoes .details-info{
+	clear: both;
+	
+}
+.post .attachment-publicacoes {
+	float: left;	
+	margin-right: 5%;
+}
+
+
+
+/* Page Events
+------------------------------------------------------------ */
+
+#em-wrapper #current-events .event {
+	float: left;
+	margin-left: 3%;
+	width: 30%;
+}
+#current-events .event .image img {
+	width: 100%;
+}
+#current-events .event p {
+	margin: 0 0 10px;
+}
 
 /* Column Classes
 ------------------------------------------------------------ */
@@ -832,18 +873,19 @@ h1 {
 h2,
 h2 a,
 h2 a:visited {
+	color: black;
 	font-size: 28px;
 }
 
 h2 a,
 h2 a:visited {
-	color: #400D02;
+	color: #593f36;
 	font-family: 'lora', georgia, serif;
 }
 
 h2 a:hover {
-	color: #400D02;
-	text-decoration: none;
+	color: #000000;
+	text-decoration: underline;
 }
 
 .widget-area h2,
@@ -852,12 +894,18 @@ h2 a:hover {
 	margin: 0 0 5px;
 }
 
-h3 {
+h3,
+h3 a {
+	color: #593f36;
 	font-size: 24px;
+	text-decoration: none;
 }
 
-h4 {
+h4,
+h4 a {
+	color: #593f36;
 	font-size: 20px;
+	text-decoration: none;
 }
 
 .taxonomy-description h1,
@@ -1557,6 +1605,10 @@ div.gform_wrapper .gform_footer {
 
 /* Featureds in home
 ------------------------------------------------------------ */
+
+.flexslider {
+	background: none !important;
+}
 
 #second-featured {
 	clear: both;

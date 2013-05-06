@@ -1,0 +1,172 @@
+/* Microsite Conferência 2008 - Por Rubens Fernando http://www.rubensfernando.com */
+
+/* @group Imports */
+
+
+
+/* @end */
+
+/* @group Geral */
+
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-size:13px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+#wrap {
+	width:950px;
+	margin: 0 auto;
+}
+a {
+	color:#000000;
+	text-decoration:none;
+}
+a.selected {
+	border-bottom: #8B5D3B solid 1px;
+	color:#8B5D3B;
+}
+h2 {
+	text-indent:0;
+	margin: 0 0 15px 0;
+}
+h3 {
+	font-size:18px;
+}
+
+div.carregando {
+	background:url(images/ajax-loader.gif) no-repeat;
+	padding: 0 0 0 21px;
+	height:16px;
+}
+
+/* @end */
+
+/* @group Titulos */
+
+h2.conferencia {
+	background:url(images/tituloAconferencia.jpg) no-repeat;
+	width:234px;
+	height: 25px;
+}
+h2.palestrantes {
+	background: url(images/tituloOsPalestrantes.jpg) no-repeat;
+	width:234px;
+	height: 25px;
+}
+h2.folder {
+	background:url(images/tituloFolder.jpg) no-repeat;
+	width:234px;
+	height: 25px;
+}
+h2.inscricoes {
+	background: url(images/tituloInscricoes.jpg) no-repeat;
+	width:234px;
+	height: 25px;
+}
+h2.aovivo {
+	background: url(images/tituloAovivo.jpg) no-repeat;
+	width:234px;
+	height: 25px;
+}
+h2.acompanhe {
+	background: url(images/tituloAcompanhe.jpg) no-repeat;
+	width:234px;
+	height: 25px;
+}
+
+
+/* @end */
+
+/* @group Topo Do Site */
+
+#topo {
+	height:213px;
+	clear:both;
+	width:950px;
+	margin:0 0 40px 0;
+}
+#menu ul li {
+	display:inline;
+	font-size:16px;
+	margin:0 0 0 10px;
+}
+#menu {
+	position:absolute;
+	margin: -20px 0 0 20px;
+	width:900px;
+}
+#menu a {
+	display:block;
+	float:left;
+	text-align:center;
+	margin:0 10px;
+}
+#menu a:hover {
+	border-bottom: #8B5D3B solid 1px;
+	color:#8B5D3B;
+}
+
+/* @end */
+
+/* @group Formulario */
+
+.obrigatorio {
+	color: #0000CC;
+}
+
+/* @end */
+
+/* @group Conteudo do Site */
+
+#container {
+	clear:both;
+}
+
+#conteudo {
+	width:850px;
+	float:left;
+	margin: 0 0 20px 0;
+	padding: 0 0 0 30px;
+}
+#conteudo p {
+	padding:0 0 10px 0;
+	text-indent:10px;
+}
+
+hr {
+	margin: 15px 0;
+	border: none;
+}
+
+/* @end */
+
+/* @group Barra Lateral */
+
+#sidebar {
+	float:right;
+	width:250px;
+}
+
+
+/* @end */
+
+/* @group Rodapé */
+
+#rodape {
+	clear:both;
+	border-top:#000000 solid 1px;
+	margin:10px 0 0 0;
+	text-align:center;
+}
+#w3counter {
+	display:none;
+}
+
+/* @end */
+
+
+
+
