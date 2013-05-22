@@ -24,15 +24,6 @@
       "initialSize" : 3609,
       "fileType" : 8192
     },
-    "\/js\/jquery.countdown.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.countdown.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/screenshot.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -55,24 +46,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery.countdown.min-ck.js",
       "fileType" : 64
     },
-    "\/pagina_conferencia2010.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pagina_conferencia2010.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/page-users.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/page-users.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/js\/commons-ck.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -83,6 +56,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/commons-ck-ck.js",
       "fileType" : 64
+    },
+    "\/page-users.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/page-users.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/apple-touch-icon-72x72-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
@@ -104,17 +86,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/apple-touch-icon-precomposed.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-precomposed.png",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-precomposed.png",
-      "initialSize" : 730,
-      "fileType" : 8192
-    },
     "\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -132,6 +103,17 @@
       "inputAbbreviatedPath" : "\/archive-audioevideo.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/images\/apple-touch-icon-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-touch-icon-precomposed.png",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/images\/apple-touch-icon-precomposed.png",
+      "initialSize" : 730,
+      "fileType" : 8192
     },
     "\/images\/arrow-down.png" : {
       "ignoreWasSetByUser" : 0,
@@ -394,6 +376,15 @@
       "initialSize" : 450,
       "fileType" : 4096
     },
+    "\/css\/jquery.countdown.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/jquery.countdown.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/conferencia2009\/images\/mapa.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -488,15 +479,6 @@
       "outputAbbreviatedPath" : "\/conferencia2008\/images\/tituloInscricoes.jpg",
       "initialSize" : 1643,
       "fileType" : 4096
-    },
-    "\/less\/build\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/build\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/page-conferencia2008.php" : {
       "ignoreWasSetByUser" : 0,
@@ -600,19 +582,6 @@
       "outputAbbreviatedPath" : "\/js\/tinynav.min-ck.js",
       "fileType" : 64
     },
-    "\/less\/style.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/less\/style.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/build\/style.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
     "\/images\/logo_gruponews.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -624,6 +593,15 @@
       "initialSize" : 2621,
       "fileType" : 8192
     },
+    "\/page-conferencia2010.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/page-conferencia2010.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/page-conferencia2009.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -632,15 +610,6 @@
       "inputAbbreviatedPath" : "\/page-conferencia2009.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/conferencia2008\/css\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/conferencia2008\/css\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/conferencia2010\/images\/mapa.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -652,6 +621,15 @@
       "outputAbbreviatedPath" : "\/conferencia2010\/images\/mapa.jpg",
       "initialSize" : 245572,
       "fileType" : 4096
+    },
+    "\/css\/page_style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/page_style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/js\/jquery.validate.js" : {
       "ignoreWasSetByUser" : 0,
@@ -675,12 +653,12 @@
       "initialSize" : 1475,
       "fileType" : 8192
     },
-    "\/css\/page_style.css" : {
+    "\/conferencia2008\/css\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/page_style.css",
+      "inputAbbreviatedPath" : "\/conferencia2008\/css\/style.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -750,17 +728,6 @@
       "initialSize" : 146,
       "fileType" : 8192
     },
-    "\/js\/videos.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/videos.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/videos-ck.js",
-      "fileType" : 64
-    },
     "\/conferencia2009\/images\/topo_01.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -771,6 +738,17 @@
       "outputAbbreviatedPath" : "\/conferencia2009\/images\/topo_01.jpg",
       "initialSize" : 58912,
       "fileType" : 4096
+    },
+    "\/js\/videos.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/videos.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/videos-ck.js",
+      "fileType" : 64
     },
     "\/images\/apple-touch-icon-57x57-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
@@ -896,17 +874,6 @@
       "outputAbbreviatedPath" : "\/js\/jwplayer_old-ck.js",
       "fileType" : 64
     },
-    "\/js\/jquery.fitvids.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.fitvids.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/jquery.fitvids-ck.js",
-      "fileType" : 64
-    },
     "\/single.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -915,15 +882,6 @@
       "inputAbbreviatedPath" : "\/single.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/conferencia2010\/css\/sIFR-screen.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/conferencia2010\/css\/sIFR-screen.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/conferencia2008\/images\/tituloAconferencia.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -936,12 +894,32 @@
       "initialSize" : 2138,
       "fileType" : 4096
     },
+    "\/js\/jquery.fitvids.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.fitvids.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/jquery.fitvids-ck.js",
+      "fileType" : 64
+    },
     "\/conferencia2009\/css\/sIFR-print.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/conferencia2009\/css\/sIFR-print.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/conferencia2010\/css\/sIFR-screen.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/conferencia2010\/css\/sIFR-screen.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -967,17 +945,6 @@
       "outputAbbreviatedPath" : "\/conferencia2010\/js\/sifr-addons-ck.js",
       "fileType" : 64
     },
-    "\/images\/ui-bg_flat_0_aaaaaa_40x100.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
-      "initialSize" : 149,
-      "fileType" : 8192
-    },
     "\/js\/jquery.jplayer.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -988,6 +955,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/jquery.jplayer.min-ck.js",
       "fileType" : 64
+    },
+    "\/images\/ui-bg_flat_0_aaaaaa_40x100.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
+      "initialSize" : 149,
+      "fileType" : 8192
     },
     "\/conferencia2009\/js\/sifr.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1028,15 +1006,6 @@
       "inputAbbreviatedPath" : "\/conferencia2009\/css\/style.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
-    },
-    "\/single-publicacoes.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/single-publicacoes.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/conferencia2008\/images\/tituloFolder.jpg" : {
       "ignoreWasSetByUser" : 0,

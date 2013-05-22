@@ -11,17 +11,15 @@ add_action( 'wp_head', 'add_javascript_webtv_head' );
 add_action( 'genesis_after_footer', 'add_javascript_webtv' );
 
 function add_javascript_webtv_head() {
-	echo '<script src="'. get_stylesheet_directory_uri() .'/js/jwplayer.js"></script>';
 	echo '<script src="'. get_stylesheet_directory_uri() .'/css/jquery.countdown.css"></script>';
 	echo '<script src="'. get_stylesheet_directory_uri() .'/js/jquery.countdown.min.js"></script>';
 	echo '<script src="'. get_stylesheet_directory_uri() .'/js/jquery.countdown-pt-BR.js"></script>';
-	echo '<script>jwplayer.key="XAUG+uaHco6ekMS25hfNDbPRrRlqCMnLA7mXCw=="</script>';
 }
 	
 function add_javascript_webtv() {
 	echo '<script type="text/javascript" src="'. get_stylesheet_directory_uri() .'/js/jquery.fitvids.js"></script>';
 	echo '<script type="text/javascript" src="'. get_stylesheet_directory_uri() .'/js/videos.js"></script>';
-	echo do_shortcode('[events_list scope="future" category="35" limit="1"]<script type="text/javascript">var newYear = new Date(); newYear = new Date(#Y, #m -1, #j, #G, #i); jQuery(function($) { $.countdown.setDefaults($.countdown.regional["pt-BR"]); $("#contadorProximo").countdown({until: newYear})}); </script> [/events_list]');
+	echo do_shortcode('[events_list scope="future" category="861" limit="1"]<script type="text/javascript">var newYear = new Date(); newYear = new Date(#Y, #m -1, #j, #G, #i); jQuery(function($) { $.countdown.setDefaults($.countdown.regional["pt-BR"]); $("#contadorProximo").countdown({until: newYear})}); </script> [/events_list]');
     echo '<script type="text/javascript" src="'. get_stylesheet_directory_uri() .'/js/jquery.jplayer.min.js"></script>';
 }
 
@@ -29,7 +27,7 @@ function sibebar_webtv() {
 	echo '<div id="next-live" class="widget"><h4>Próxima transmissão</h4>';
 	echo '<span id="contadorProximo"></span></div>';
 	echo '<div id="next-times" class="widget"><h4>Próximos horários</h4>';
-	echo do_shortcode('<ul>[events_list_grouped mode="daily" scope="future" category="35" limit="5" date_format="j.M" ]<li><strong>#_24HSTARTTIME</strong> #_EVENTNAME</li>[/events_list_grouped]</ul>
+	echo do_shortcode('<ul>[events_list_grouped mode="daily" scope="future" category="861" limit="5" date_format="j.M" ]<li><strong>#_24HSTARTTIME</strong> #_EVENTNAME</li>[/events_list_grouped]</ul>
 	<p class="small" style="padding: 15px;">Os horários e as datas das atividades podem ser alterados sem aviso prévio.</p></div>');
 }
 
@@ -72,7 +70,7 @@ function loop_webtv_single() {
 								file : "/files_media/<?php echo $fileFlash; ?>",
 									modes : [{
 										type : "flash",
-										src : "/files_media/player.swf"
+										src : "/files_media/player_tv.swf"
 									}, {
 										type : "html5",
 										config : {

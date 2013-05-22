@@ -2,51 +2,54 @@
 /** Start the engine */
 require_once(TEMPLATEPATH.'/lib/init.php');
 
-
-/** Add Viewport meta tag for mobile browsers */
+/*-------------------------------------------------*/
+// Admin
+/*-------------------------------------------------*/
 // This theme styles the visual editor with editor-style.css to match the theme style.
 add_editor_style();
 // Add the Style Dropdown Menu to the second row of visual editor buttons
-function my_mce_buttons_2($buttons)
-{
+function my_mce_buttons_2($buttons) {
 	array_unshift($buttons, 'styleselect');
 	return $buttons;
 }
 add_filter('mce_buttons_2', 'my_mce_buttons_2');
-function my_mce_before_init($init_array)
-	{
-		// Now we add classes with title and separate them with;
-		$init_array['theme_advanced_styles'] = "Notas=notes;PeBio=pebio";
+function my_mce_before_init($init_array) {
+	// Now we add classes with title and separate them with;
+	$init_array['theme_advanced_styles'] = "Notas=notes;PeBio=pebio";
 	return $init_array;
 }
-
 add_filter('tiny_mce_before_init', 'my_mce_before_init');
 
-
-
+/*-------------------------------------------------*/
+// Head and Footer
+/*-------------------------------------------------*/
+/** Add Viewport meta tag for mobile browsers */
 add_action( 'genesis_meta', 'add_viewport_meta_tag' );
 add_action('genesis_before', 'facebook_sdk');
-remove_action('genesis_before_loop', 'genesis_do_breadcrumbs');
-add_action('genesis_before_loop', 'breadcrumb_new');
+
 /** Load custom favicon to header */
 add_filter( 'genesis_pre_load_favicon', 'custom_favicon_filter' );
 function custom_favicon_filter( $favicon_url ) {
     return '/favicon.ico';
 }
 function add_viewport_meta_tag() {
+	echo '<meta name="apple-mobile-web-app-capable" content="yes" />';
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
-}
-
-function breadcrumb_new() {
-	if ( is_home() == false && function_exists('yoast_breadcrumb') ) {
-		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-	}
 }
 add_action( 'genesis_footer', 'add_javascript' );
 function add_javascript() {
 	echo '<script type="text/javascript" src="'. get_stylesheet_directory_uri() .'/js/commons.js"></script>';
     echo '<script type="text/javascript" src="'. get_stylesheet_directory_uri() .'/js/tinynav.min.js"></script>';
 }
+add_filter('genesis_footer_creds_text', 'footer_creds_filter');
+function footer_creds_filter( $creds ) {
+    $creds = '[footer_copyright] &middot; <a href="//www.gruponews.com.br/">GrupoNews</a>';
+    return $creds;
+}
+/*-------------------------------------------------*/
+// Top and Home
+/*-------------------------------------------------*/
+
 /** Reposition the secondary navigation menu */
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_before_header', 'genesis_do_subnav' );
@@ -66,9 +69,21 @@ function themedy_post_carousel() {
 				<?php 
 			endif;
 		} 
+}
+
+remove_action('genesis_before_loop', 'genesis_do_breadcrumbs');
+add_action('genesis_before_loop', 'breadcrumb_new');
+function breadcrumb_new() {
+	if ( is_home() == false && function_exists('yoast_breadcrumb') ) {
+		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 	}
-	
-// 
+}
+
+/*-------------------------------------------------*/
+// Posts
+/*-------------------------------------------------*/
+
+//Add featured images on posts
 add_filter('genesis_before_post_title', 'add_content_featured');
 
 function add_content_featured() {
@@ -79,19 +94,6 @@ function add_content_featured() {
 			the_post_thumbnail('materia');	
 		}
 	}
-}
-
-//Troca no rss, o nome do autor
-
-add_filter('the_author', 'guest_author_name');
-add_filter('get_the_author_display_name', 'guest_author_name');
-
-function guest_author_name($name) {
-	global $post;
-	
-	$name = get_the_term_list( $post->ID, 'autor', ' ' ,', ');
-
-	return $name;
 }
 
 /** Customize the post info function */
@@ -105,13 +107,35 @@ if ( !is_page() ) {
 /** Remove the post meta function */
 remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
 
-//Edit footer
-add_filter('genesis_footer_creds_text', 'footer_creds_filter');
-function footer_creds_filter( $creds ) {
-    $creds = '[footer_copyright] &middot; <a href="//www.gruponews.com.br/">GrupoNews</a>';
-    return $creds;
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/*-------------------------------------------------*/
+// RSS
+/*-------------------------------------------------*/
+
+//Change author names on RSS
+
+add_filter('the_author', 'guest_author_name');
+add_filter('get_the_author_display_name', 'guest_author_name');
+
+function guest_author_name($name) {
+	global $post;
+	
+	$name = get_the_term_list( $post->ID, 'autor', ' ' ,', ');
+
+	return $name;
 }
 
+// Add custom post-types on RSS Feed
+function myfeed_request($qv) {
+	if (isset($qv['feed']) && !isset($qv['post_type']))
+		$qv['post_type'] = array('post', 'audioevideo', 'event');
+	return $qv;
+}
+add_filter('request', 'myfeed_request');
 
 /*-------------------------------------------------*/
 // Users Registration and Login pages
@@ -256,9 +280,6 @@ fjs.parentNode.insertBefore(js, fjs);
 			wp_enqueue_style('page-style',get_stylesheet_directory_uri().'/css/page_style.css');
 
 			wp_enqueue_style('jquery_ui_css',get_stylesheet_directory_uri().'/css/jquery-ui.css');
-
-
-
 		}
 
 	}
@@ -273,16 +294,6 @@ add_image_size('home-destaque-medio', 191, 185, true);
 add_image_size('video-thumb', 185, 104, true);
 add_image_size('materia', 580, 213, true);
 add_image_size('publicacoes', 185, 204);
-
-
-/*-------------------------------------------------*/
-// Control Excerpt Length
-/*-------------------------------------------------*/
-
-function custom_excerpt_length( $length ) {
-	return 20;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /*-------------------------------------------------*/
 // Widgets
