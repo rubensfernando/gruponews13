@@ -719,7 +719,8 @@ p.subscribe-to-comments {
 
 .archive .category-publicacoes {
 	float: left;
-	margin-left: 3%;
+	height: 405px;
+	margin: 0 0 20px 3%;
 	width: 47%;
 }
 .archive  .category-publicacoes .details-info{

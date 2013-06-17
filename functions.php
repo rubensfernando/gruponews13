@@ -35,6 +35,7 @@ function custom_favicon_filter( $favicon_url ) {
 function add_viewport_meta_tag() {
 	echo '<meta name="apple-mobile-web-app-capable" content="yes" />';
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
+    echo '<link rel="stylesheet" id="child-theme-css"  href='.get_stylesheet_uri().' type="text/css" media="all" />';
 }
 add_action( 'genesis_footer', 'add_javascript' );
 function add_javascript() {
@@ -137,6 +138,29 @@ function myfeed_request($qv) {
 }
 add_filter('request', 'myfeed_request');
 
+function wpbeginner_titlerss($content) {
+	global $post, $EM_Category, $wp_query;
+	
+	$postid = $wp_query->post->ID;
+	$posttype = $wp_query->post->post_type;
+
+	//$events = EM_Events::get( array('limit'=>5, 'owner'=>false) );
+	
+	$events = get_the_terms( $post->ID, 'event-categories', ' ' ,', ') ;
+	$out = array();
+	
+	if($posttype == "event") {
+		foreach ( $events as $events ) $out[] = $events->name;
+		if($events->term_id == 861){
+			$content = 'Transmissão ao vivo '. $content;	
+		}
+	} else {
+		$content = $content;
+	}
+	return $content;
+}
+add_filter('the_title_rss', 'wpbeginner_titlerss');
+
 /*-------------------------------------------------*/
 // Users Registration and Login pages
 /*-------------------------------------------------*/
@@ -229,6 +253,33 @@ js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=386896871405591";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, "script", "facebook-jssdk"));</script>';
 }
+
+/*
+//First remove all JS loaded in the head section
+remove_action('wp_head', 'wp_print_scripts');
+remove_action('wp_head', 'wp_print_head_scripts', 9);
+remove_action('wp_head', 'wp_enqueue_scripts', 1);
+//Load JS at the footer of the template
+add_action('wp_footer', 'wp_print_scripts', 1);
+add_action('wp_footer', 'wp_enqueue_scripts', 1);
+add_action('wp_footer', 'wp_print_head_scripts', 1);
+*/
+
+
+//Making jQuery Google API
+function modify_jquery() {
+	if (!is_admin()) {
+		// comment out the next two lines to load the local copy of jQuery
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3');
+		wp_enqueue_script('jquery');
+		
+		wp_deregister_script('jquery-ui-core');
+		wp_register_script('jquery-ui-core', '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js', false, '1.9.2');
+		wp_enqueue_script('jquery-ui-core');
+	}
+}
+add_action('init', 'modify_jquery');
 
 /*-------------------------------------------------*/
 // Additional Stylesheets
