@@ -66,6 +66,29 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lora);
 
+@font-face {
+    font-family: 'entypo-social';
+    src: url('fonts/entypo-social.eot');
+    src: url('fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('fonts/entypo-social.woff') format('woff'),
+         url('fonts/entypo-social.ttf') format('truetype'),
+         url('fonts/entypo-social.svg#entypo-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'entypo';
+    src: url('fonts/entypo.eot');
+    src: url('fonts/entypo.eot?#iefix') format('embedded-opentype'),
+         url('fonts/entypo.woff') format('woff'),
+         url('fonts/entypo.ttf') format('truetype'),
+         url('fonts/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 /* Defaults
 ------------------------------------------------------------ */
@@ -135,14 +158,13 @@ ol li {
 	font-size:small !important;
 }
 
-
 /* Hyperlinks
 ------------------------------------------------------------ */
 
 a,
 a:visited {
-	color: #400D02;
-	text-decoration: underline;
+	color: #740012;
+	text-decoration: none;
 }
 
 a:hover {
@@ -446,7 +468,7 @@ ul.menu li.sfHover ul,
 .menu li a .sf-sub-indicator,
 .menu li li a .sf-sub-indicator,
 .menu li li li a .sf-sub-indicator {
-	background: url(images/icon-plus.png) no-repeat;
+	background: url(images/icon-arrow-black.png) no-repeat right center;
 	height: 16px;
 	position: absolute;
 	right: 8px;
@@ -596,7 +618,6 @@ ul.menu li.sfHover ul,
 .sidebar-content #content {
 	width: 580px;
 }
-
 .sidebar-content #content,
 .sidebar-sidebar-content #content {
 	float: right;
@@ -609,6 +630,7 @@ ul.menu li.sfHover ul,
 .post {
 	margin: 0 0 40px;
 }
+.page .wp-post-image,
 .post .wp-post-image {
 	margin: 0 0 15px;
 }
@@ -618,6 +640,14 @@ ul.menu li.sfHover ul,
 
 .entry-content p {
 	margin: 0 0 25px;
+}
+
+.entry-content a {
+	text-decoration: underline;
+}
+.entry-content h2 a,
+.entry-content h3 a {
+	text-decoration: none;
 }
 
 blockquote {
@@ -874,14 +904,9 @@ h1 {
 h2,
 h2 a,
 h2 a:visited {
-	color: black;
-	font-size: 28px;
-}
-
-h2 a,
-h2 a:visited {
-	color: #593f36;
 	font-family: 'lora', georgia, serif;
+	font-size: 28px;
+	text-decoration: none;
 }
 
 h2 a:hover {
@@ -1197,6 +1222,30 @@ p.wp-caption-text {
 
 #mc_signup {
 	padding: 0 15px;
+}
+.ico i {
+	font-style: normal;
+	font-size: 25px;
+	margin: 0 5px;
+}
+.ico:hover i {
+	text-decoration: none;
+}
+.facebook i {
+	font-family: "entypo-social";
+	width: 25px;
+	margin-left: 0px;
+}
+.twitter i {
+	font-family: "entypo-social";
+	width: 25px;
+}
+.rss i {
+	font-family: "entypo";
+	width: 25px;
+}
+#sidebar .widget li:last-child{
+	border-bottom: none;
 }
 
 /* Dropdowns
@@ -1781,7 +1830,7 @@ div.gform_wrapper .gform_footer {
 
 	.menu li li a .sf-sub-indicator,
 	.menu li li li a .sf-sub-indicator {
-		background: url(images/icon-plus-white.png) right no-repeat;
+		background: url(images/icon-arrow-black.png) right no-repeat;
 	}
 
 	.menu-primary li li a,
@@ -1825,6 +1874,10 @@ div.gform_wrapper .gform_footer {
 	.menu-secondary li ul ul,
 	#header .menu li ul ul {
 		margin: 0;
+	}
+	.archive .category-publicacoes {
+		height: auto;
+		width: 90%;
 	}
 
 }
@@ -1952,6 +2005,10 @@ div.gform_wrapper .gform_footer {
 		margin-left: 50%;
 		margin-top: -40px;
 	}
+	.archive .category-publicacoes {
+		height: 375px;
+		width: 40%;
+	}
 	
 }
 @media only screen and (min-width: 960px) {
@@ -1959,6 +2016,9 @@ div.gform_wrapper .gform_footer {
 		float: left;
 		margin-left: 370px;
 		margin-top: -40px;
+	}
+	.s {
+		width: 170px;
 	}
 
 }
