@@ -31,8 +31,11 @@ function sibebar_webtv() {
 	<p class="small" style="padding: 15px;">Os horários e as datas das atividades podem ser alterados sem aviso prévio.</p></div>');
 }
 
+add_action('wp_footer', 'codetrack', 100);
 
-
+function codetrack(){
+	//echo ''<!-- Begin W3Counter Pulse Real-Time Heartbeat Code --><script type='text/javascript'>(function(){var ps = document.createElement('script');ps.type = 'text/javascript'; ps.async = true; ps.src = '//pulse.w3counter.com/pulse.js?id=41004'; (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ps);})();</script><!-- End W3Counter Pulse Real-Time Heartbeat Code-->";
+}
 
 function loop_webtv_single() {
 	if (have_posts()) :
@@ -84,16 +87,30 @@ function loop_webtv_single() {
 						<iframe src="http://www.ustream.tv/embed/677618" width="580" height="326" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
 						<?php } ?>
 			<p class="small">Se você está tendo problemas de visualização da transmissão ao vivo, por favor, atualize a página e tente novamente.</p>
+
+			<?php the_content(); ?>
+
 			<div id="social-share">
 				<p>Você quer contar para alguem sobre essa transmissão</p>
-				<p><a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title;?>&amp;p[summary]=<?php echo $summary;?>&amp;p[url]=<?php echo $url; ?>&amp;&amp;','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" class="facebook">Facebook</a> | <a href="https://twitter.com/share?url=http://www.gruponews.com.br/webtv&via=gruponews&text=<?php echo 'Estou acompanhando "'.$webtv_palestra.'"' ?>" class="twitter">twitter</a></p>
+				<p><a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title;?>&amp;p[summary]=<?php echo $summary;?>&amp;p[url]=<?php echo $url; ?>&amp;&amp;','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" class="facebook"><i class="icon icon-social" >&#62222;</i> Facebook</a> | <a href="https://twitter.com/share?url=http://www.gruponews.com.br/webtv&via=gruponews&text=<?php echo 'Estou acompanhando "'.$webtv_palestra.'"' ?>" class="twitter"><i class="icon icon-social" >&#62217;</i> Twitter</a></p>
 			</div>
 			<div id="chat">		
 				<h2>Chat</h2>		
 				<div class="fb-comments" data-href="//www.gruponews.com.br/webtv" data-width="580" data-num-posts="10"></div>
 			</div>
 			
-			
+			<!-- Begin W3Counter Pulse Real-Time Heartbeat Code -->
+<script type="text/javascript">
+(function(){
+  var ps = document.createElement('script');
+	 ps.type = 'text/javascript';
+	 ps.async = true;
+	 ps.src = '//pulse.w3counter.com/pulse.js?id=41004';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ps);
+})();
+</script>
+<!-- End W3Counter Pulse Real-Time Heartbeat Code-->
+
 		<?php endwhile;
 				endif;
 				}
