@@ -2,6 +2,9 @@
 /** Start the engine */
 require_once(TEMPLATEPATH.'/lib/init.php');
 
+//* Add HTML5 markup structure
+add_theme_support( 'html5' );
+
 /*-------------------------------------------------*/
 // Admin
 /*-------------------------------------------------*/
@@ -44,7 +47,7 @@ function add_javascript() {
 }
 add_filter('genesis_footer_creds_text', 'footer_creds_filter');
 function footer_creds_filter( $creds ) {
-    $creds = '[footer_copyright] &middot; <a href="//www.gruponews.com.br/">GrupoNews</a>';
+    $creds = '<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />Todo o conteúdo do site do GrupoNews está licenciado sob a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Atribuição-NãoComercial-SemDerivações 4.0 Internacional</a>.';
     return $creds;
 }
 /*-------------------------------------------------*/
@@ -72,41 +75,53 @@ function themedy_post_carousel() {
 		} 
 }
 
-remove_action('genesis_before_loop', 'genesis_do_breadcrumbs');
-add_action('genesis_before_loop', 'breadcrumb_new');
+//remove_action('genesis_before_loop', 'genesis_do_breadcrumbs');
+/*add_action('genesis_before_loop', 'breadcrumb_new');
 function breadcrumb_new() {
 	if ( is_home() == false && function_exists('yoast_breadcrumb') ) {
 		yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 	}
-}
+}*/
 
 /*-------------------------------------------------*/
 // Posts
 /*-------------------------------------------------*/
 
 //Add featured images on posts
-add_filter('genesis_before_post_title', 'add_content_featured');
+add_filter('genesis_entry_header', 'add_content_featured');
 
 function add_content_featured() {
-	if ( has_post_thumbnail() ) {
-		if ( in_category( 'publicacoes' ) == true) {
-			the_post_thumbnail('publicacoes');				
-		} else {
-			the_post_thumbnail('materia');	
+	if ( !is_archive()) {
+		if ( has_post_thumbnail() ) {
+			if ( in_category( 'publicacoes' ) == true) {
+				the_post_thumbnail('publicacoes');				
+			} else {
+				the_post_thumbnail('materia');	
+			}
 		}
 	}
 }
 
-/** Customize the post info function */
-add_filter( 'genesis_post_info', 'post_info_filter' );
-function post_info_filter($post_info) {
-if ( !is_page() ) {
-    $post_info = '[post_date] por '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' [post_comments] [post_edit]';
-    return $post_info;
-}}
 
-/** Remove the post meta function */
-remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+/** Customize the post info function */
+//add_filter( 'genesis_post_info', 'post_info_filter' );
+function post_info_filter($post_info) {
+	if ( !is_page() &&  !is_post_type_archive('event') ) {
+    	$post_info = 'Por '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' [post_edit]';
+    	return $post_info;
+	} else {
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+	}
+	
+}
+add_filter( 'genesis_post_info', 'sp_post_info_filter' );
+function sp_post_info_filter($post_info) {
+	$post_info = 'Por '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' [post_edit]';
+	return $post_info;
+}
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
+
 
 function custom_excerpt_length( $length ) {
 	return 20;
@@ -116,6 +131,19 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 /*-------------------------------------------------*/
 // RSS
 /*-------------------------------------------------*/
+
+
+// show post thumbnails in feeds
+function diw_post_thumbnail_feeds($content) {
+	global $post;
+	if(has_post_thumbnail($post->ID)) {
+		$content = '<div>' . get_the_post_thumbnail($post->ID, 'materia') . '</div>' . $content;
+	}
+	return $content;
+}
+add_filter('the_excerpt_rss', 'diw_post_thumbnail_feeds');
+add_filter('the_content_feed', 'diw_post_thumbnail_feeds');
+
 
 //Change author names on RSS
 
@@ -159,7 +187,45 @@ function wpbeginner_titlerss($content) {
 	}
 	return $content;
 }
-add_filter('the_title_rss', 'wpbeginner_titlerss');
+//add_filter('the_title_rss', 'wpbeginner_titlerss');
+
+function changeUrlEvent($content) {
+	global $post, $EM_Category, $wp_query;
+
+	$posttype = $wp_query->post->post_type;
+	$events = get_the_terms( $post->ID, 'event-categories', ' ' ,', ') ;
+
+	if($posttype == "event") {
+		foreach ( $events as $events ) $out[] = $events->name;
+		if($events->term_id == 861){
+			$content = 'http://www.gruponews.com.br/webtv';
+		}
+	} else {
+		$content = $content;
+	}
+	return $content;
+}
+add_filter('the_permalink_rss', 'changeUrlEvent');
+add_filter('comments_link_feed', 'changeUrlEvent');
+
+function excludecatfeed($query) {
+	if(is_feed()) {
+		$query->set('event-categories','-861');
+		$query->set('cat','-861');
+		$query->set('term_id','-861');
+		$query->set('tax_query',array(
+				    'post_type' => 'event',
+				    'tax_query' => array(
+			            'taxonomy' => 'event-categories',
+			            'field' => 'id',
+			            'terms' => 861,
+			        	'operator' => 'NOT IN' //you must set the operator to NOT IN
+						)
+					));
+		return $query;
+	}
+}
+//add_filter('pre_get_posts', 'excludecatfeed');
 
 /*-------------------------------------------------*/
 // Users Registration and Login pages
@@ -264,6 +330,47 @@ add_action('wp_footer', 'wp_print_scripts', 1);
 add_action('wp_footer', 'wp_enqueue_scripts', 1);
 add_action('wp_footer', 'wp_print_head_scripts', 1);
 */
+
+add_filter( 'genesis_attr_body', 'change_schema' );
+function change_schema( $attributes ){
+        
+		$post_type = get_post_type( get_the_ID() );
+
+        // if About page, use the AboutPage schema
+        if( is_page( 'quem-somos' ) )
+            $attributes['itemtype'] = 'http://schema.org/AboutPage';
+        
+        // if Services page, use the ContactPage schema
+        if( is_page( 'contato' ) )
+            $attributes['itemtype'] = 'http://schema.org/ContactPage';
+
+        return $attributes;
+        
+}
+
+add_filter( 'genesis_attr_entry', 'change_schema_events' );
+
+function change_schema_events( $attributes ) {
+
+	global $post;
+	if ( 'event' === $post->post_type ) {
+		$attributes['itemscope'] = 'itemscope';
+		$attributes['itemtype']  = 'http://schema.org/Events';
+
+		add_filter( 'genesis_attr_entry-title', function ($attributes) {
+			$attributes['itemprop'] = 'name';
+			return $attributes;
+		});
+		add_filter( 'genesis_attr_entry-image', function ($attributes) {
+			$attributes['itemprop'] = 'image';
+			return $attributes;
+		});
+
+	}
+
+	return $attributes;
+
+}
 
 
 //Making jQuery Google API

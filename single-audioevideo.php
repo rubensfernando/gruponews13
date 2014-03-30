@@ -2,9 +2,9 @@
 Template Name: Single Page - Audio e video
 */ 
 
-//remove_action( 'genesis_before_post_content', 'genesis_post_info' );
-remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
-remove_action( 'genesis_after_post', 'genesis_do_author_box_single' );
+//remove_action( 'genesis_before_entry_content', 'genesis_post_info' );
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+remove_action( 'genesis_after_entry', 'genesis_do_author_box_single' );
 
 remove_action('genesis_loop', 'genesis_do_loop');//remove genesis loop
 add_action('genesis_loop', 'loop_audioevideo_single');//add the special loop
@@ -79,15 +79,8 @@ function loop_audioevideo_single() {
 				?>
 		<div class="details-info">
 			<h1 class="entry-title"><?php the_title(); ?></h1>	
-			<?php 
-				$post_info = '[post_date] ' . __( 'By', 'genesis' ) .' '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') . ' [post_comments] [post_edit]';
-				printf( '<div class="post-info">%s</div>', apply_filters( 'genesis_post_info', $post_info ) );
-				the_content();	
-			?>
-		</div>
-		
-		<!--
-<div class="details-link">
+			
+			<div class="details-link">
 			<ul>
 			<?php
 				if ($lnk_annotations != "" ) { ?>
@@ -100,7 +93,12 @@ function loop_audioevideo_single() {
 				}
 			?>	
 			</ul>
--->
+			<?php 
+				//$post_info = '[post_date] ' . __( 'By', 'genesis' ) .' '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') . ' [post_comments] [post_edit]';
+				//printf( '<div class="post-info">%s</div>', apply_filters( 'genesis_post_info', $post_info ) );
+				the_content();
+			?>
+		</div>
 		</div>
 	</div>
 	<?php

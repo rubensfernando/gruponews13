@@ -27,7 +27,7 @@ function sibebar_webtv() {
 	echo '<div id="next-live" class="widget"><h4>Próxima transmissão</h4>';
 	echo '<span id="contadorProximo"></span></div>';
 	echo '<div id="next-times" class="widget"><h4>Próximos horários</h4>';
-	echo do_shortcode('<ul>[events_list_grouped mode="daily" scope="future" category="861" limit="5" date_format="j.M" ]<li><strong>#_24HSTARTTIME</strong> #_EVENTNAME</li>[/events_list_grouped]</ul>
+	echo do_shortcode('<ul>[events_list_grouped mode="daily" scope="future" category="861" limit="20" date_format="j.M" ]<li><strong>#_24HSTARTTIME</strong> #_EVENTNAME</li>[/events_list_grouped]</ul>
 	<p class="small" style="padding: 15px;">Os horários e as datas das atividades podem ser alterados sem aviso prévio.</p></div>');
 }
 
@@ -96,7 +96,7 @@ function loop_webtv_single() {
 			</div>
 			<div id="chat">		
 				<h2>Chat</h2>		
-				<div class="fb-comments" data-href="//www.gruponews.com.br/webtv" data-width="580" data-num-posts="10"></div>
+				<div class="fb-comments" data-href="http://www.gruponews.com.br/webtv?conferencia2013" data-numposts="10"></div>
 			</div>
 			
 			<!-- Begin W3Counter Pulse Real-Time Heartbeat Code -->
@@ -110,6 +110,18 @@ function loop_webtv_single() {
 })();
 </script>
 <!-- End W3Counter Pulse Real-Time Heartbeat Code-->
+<!-- Begin W3Counter Tracking Code -->
+<script type="text/javascript" src="https://www.w3counter.com/securetracker.js"></script>
+<script type="text/javascript">
+w3counter(41004);
+</script>
+<noscript>
+<div><a href="http://www.w3counter.com" style="display: none;"><img src="https://www.w3counter.com/tracker.php?id=41004" style="display: none; border: 0" alt="W3Counter" /></a></div>
+</noscript>
+<!-- End W3Counter Tracking Code -->
+<!-- Piwik Image Tracker -->
+<img src="http://stats.gruponews.com.br/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+<!-- End Piwik -->
 
 		<?php endwhile;
 				endif;

@@ -14,7 +14,7 @@ add_action('genesis_after_loop', 'loopNovidades');
 add_action('genesis_after_loop', 'loopAudioVideos');
 function loopMedio() {
 
-		echo '<div id="second-featured">';
+		echo '<section id="second-featured">';
 
 		$Posts_Destaques2 = new WP_Query();
 		$Posts_Destaques2->query( array(
@@ -34,21 +34,23 @@ function loopMedio() {
 
 		include (STYLESHEETPATH . '/functions-layout.php');
 		?>
-		<div <?php post_class(); ?>>
+		<article <?php post_class(); ?>>
 				<?php echo the_post_thumbnail('home-destaque-medio');?>
-				<div class="entry">
+				<header>
 					<h2><a href="<?php echo get_permalink();?>"> <?php the_title();?></a></h2>
+				</header>
+				<div class="entry-content">
 						<?php the_content_limit(339);?>
 				</div>
-			</div>
+			</article>
 		<?php endwhile;
-		echo '</div>';
+		echo '</section>';
 }
 
 function loopNovidades() {
 	global $paged;
 
-	echo '<div id="third-featured">';
+	echo '<section id="third-featured">';
 	echo '<h3 class="title">Novidades</h3>';
 	
 	$Posts_Outros = new WP_Query();
@@ -59,27 +61,29 @@ function loopNovidades() {
 				'audioevideo'
 				),
 			'meta_key'=>'wpcf-gn_post_destaques',
-			'meta_value'=>'destaque_medio',
+			'meta_value'=>'destaque_novidade',
 			'posts_per_page'=>'5'
 			)
 		);
 		while ($Posts_Outros->have_posts()) : $Posts_Outros->the_post();
 		include (STYLESHEETPATH . '/functions-layout.php');
 		?>
-		<div <?php post_class(); ?>>
-				<div class="entry">
-					<h4><a href="<?php echo get_permalink();?>"> <?php the_title();?></a></h4>
+		<article <?php post_class(); ?>>
+			<header>
+				<h4><a href="<?php echo get_permalink();?>"> <?php the_title();?></a></h4>
+			</header>
+				<div class="entry-content">
 						<?php the_content_limit(150);?>
 				</div>
-			</div>
+			</article>
 		<?php endwhile;
-	echo '</div>';
+	echo '</section>';
 }
 
 function loopAudioVideos() {
 	global $paged;
 
-	echo '<div id="audiovideo-featured">';
+	echo '<section id="audiovideo-featured">';
 	echo '<h3 class="title">Áudio e vídeo</h3>';
 	
 	$Posts_Outros = new WP_Query();
@@ -93,7 +97,7 @@ function loopAudioVideos() {
 		while ($Posts_Outros->have_posts()) : $Posts_Outros->the_post();
 		include (STYLESHEETPATH . '/functions-layout.php');
 		?>
-		<div <?php post_class(); ?>>
+		<article <?php post_class(); ?>>
 				<div class="entry">
 					<?php 
 						if ( has_post_thumbnail() ) {
@@ -102,9 +106,9 @@ function loopAudioVideos() {
 					?>
 					<h4><a href="<?php echo get_permalink();?>"> <?php the_title();?></a></h4>
 				</div>
-			</div>
+			</article>
 		<?php endwhile;
-	echo '</div>';
+	echo '</section>';
 }
 
 genesis();

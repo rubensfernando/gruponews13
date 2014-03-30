@@ -42,7 +42,7 @@ class gn_notices extends WP_Widget {
 		
 		if ($link != "") {
 			$linkBtn = '<p><a class="bannerBtn" href="'. $link.'">'. $textLink .'</a></p>';
-			$linkImage = '<a href="'. $link.'"><img src="'. $image .'" /></a>';
+			$linkImage = '<a href="'. $link.'?utm_source=banner-aviso&utm_medium=link&utm_campaign=interno"><img src="'. $image .'" /></a>';
 		} else {
 			$linkImage = '<img src="'. $image .'" />';
 		}
