@@ -70,9 +70,9 @@ function themedy_post_carousel() {
 						<?php dynamic_sidebar('Top Featured Area') ; ?> 
 					</div>
 				</div>
-				<?php 
+				<?php
 			endif;
-		} 
+		}
 }
 
 //remove_action('genesis_before_loop', 'genesis_do_breadcrumbs');
@@ -94,9 +94,9 @@ function add_content_featured() {
 	if ( !is_archive()) {
 		if ( has_post_thumbnail() ) {
 			if ( in_category( 'publicacoes' ) == true) {
-				the_post_thumbnail('publicacoes');				
+				the_post_thumbnail('publicacoes');
 			} else {
-				the_post_thumbnail('materia');	
+				the_post_thumbnail('materia');
 			}
 		}
 	}
@@ -112,7 +112,7 @@ function post_info_filter($post_info) {
 	} else {
 		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 	}
-	
+
 }
 add_filter( 'genesis_post_info', 'sp_post_info_filter' );
 function sp_post_info_filter($post_info) {
@@ -152,7 +152,7 @@ add_filter('get_the_author_display_name', 'guest_author_name');
 
 function guest_author_name($name) {
 	global $post;
-	
+
 	$name = get_the_term_list( $post->ID, 'autor', ' ' ,', ');
 
 	return $name;
@@ -166,28 +166,28 @@ function myfeed_request($qv) {
 }
 add_filter('request', 'myfeed_request');
 
-function wpbeginner_titlerss($content) {
+function gn_titlerss($content) {
 	global $post, $EM_Category, $wp_query;
-	
+
 	$postid = $wp_query->post->ID;
 	$posttype = $wp_query->post->post_type;
 
 	//$events = EM_Events::get( array('limit'=>5, 'owner'=>false) );
-	
+
 	$events = get_the_terms( $post->ID, 'event-categories', ' ' ,', ') ;
 	$out = array();
-	
+
 	if($posttype == "event") {
 		foreach ( $events as $events ) $out[] = $events->name;
 		if($events->term_id == 861){
-			$content = 'Transmissão ao vivo '. $content;	
+			$content = 'Transmissão ao vivo '. $content;
 		}
 	} else {
 		$content = $content;
 	}
 	return $content;
 }
-//add_filter('the_title_rss', 'wpbeginner_titlerss');
+//add_filter('the_title_rss', 'gn_titlerss');
 
 function changeUrlEvent($content) {
 	global $post, $EM_Category, $wp_query;
