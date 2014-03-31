@@ -475,4 +475,3 @@ genesis_register_sidebar(array(
 	'before_title' 	=> '<h3>', 
 	'after_title' 	=> '</h3>'
 	));
-

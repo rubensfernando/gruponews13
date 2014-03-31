@@ -15,7 +15,7 @@ function add_javascript_webtv_head() {
 	echo '<script src="'. get_stylesheet_directory_uri() .'/js/jquery.countdown.min.js"></script>';
 	echo '<script src="'. get_stylesheet_directory_uri() .'/js/jquery.countdown-pt-BR.js"></script>';
 }
-	
+
 function add_javascript_webtv() {
 	echo '<script type="text/javascript" src="'. get_stylesheet_directory_uri() .'/js/jquery.fitvids.js"></script>';
 	echo '<script type="text/javascript" src="'. get_stylesheet_directory_uri() .'/js/videos.js"></script>';
@@ -42,17 +42,18 @@ function loop_webtv_single() {
 		while (have_posts()) : the_post();
 		include (STYLESHEETPATH . '/functions-layout.php');
 
-		$title=urlencode("Transmissão ".$webtv_palestra." - GrupoNews");
-		$url=urlencode('http://www.gruponews.com.br/webtv');
-		$summary=urlencode('Estou assistindo "'.$webtv_palestra.'"');
-		
+		$title = urlencode("Transmissão ".$webtv_palestra." - GrupoNews");
+		$title_chat = urlencode($webtv_palestra);
+		$url = urlencode('http://www.gruponews.com.br/webtv');
+		$summary = urlencode('Estou assistindo "'.$webtv_palestra.'"');
+
 		?>
 			<h1 class="entry-title"><?php echo($webtv_palestra); ?></h1>
 			<div id='video'></div>
 						 <?php
 						 	$fileFlash;
 							$fileIos;
-							
+
 						 	if ($webtv_sistema == 0) {
 						 		if ($webtv_qualidade == 0){
 						 			$fileFlash = "flash-mbr.xml";
@@ -83,7 +84,7 @@ function loop_webtv_single() {
 							});
 						</script>
 						<?php } elseif ($webtv_sistema == 1) {; ?>
-			
+
 						<iframe src="http://www.ustream.tv/embed/677618" width="580" height="326" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
 						<?php } ?>
 			<p class="small">Se você está tendo problemas de visualização da transmissão ao vivo, por favor, atualize a página e tente novamente.</p>
@@ -94,11 +95,11 @@ function loop_webtv_single() {
 				<p>Você quer contar para alguem sobre essa transmissão</p>
 				<p><a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title;?>&amp;p[summary]=<?php echo $summary;?>&amp;p[url]=<?php echo $url; ?>&amp;&amp;','sharer','toolbar=0,status=0,width=548,height=325');" href="javascript: void(0)" class="facebook"><i class="icon icon-social" >&#62222;</i> Facebook</a> | <a href="https://twitter.com/share?url=http://www.gruponews.com.br/webtv&via=gruponews&text=<?php echo 'Estou acompanhando "'.$webtv_palestra.'"' ?>" class="twitter"><i class="icon icon-social" >&#62217;</i> Twitter</a></p>
 			</div>
-			<div id="chat">		
-				<h2>Chat</h2>		
-				<div class="fb-comments" data-href="http://www.gruponews.com.br/webtv?conferencia2013" data-numposts="10"></div>
+			<div id="chat">
+				<h2>Chat</h2>
+				<div class="fb-comments" data-href="http://www.gruponews.com.br/webtv?<?php echo $title_chat;?>" data-numposts="10"></div>
 			</div>
-			
+
 			<!-- Begin W3Counter Pulse Real-Time Heartbeat Code -->
 <script type="text/javascript">
 (function(){
@@ -127,4 +128,3 @@ w3counter(41004);
 				endif;
 				}
 				genesis();
-			
