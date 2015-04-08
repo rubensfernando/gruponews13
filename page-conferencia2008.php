@@ -26,9 +26,6 @@
 <body>
 
 
-<?php
-	include ('masters/cabecalho.php');
- ?>
 	<div id="wrap">
 		<div id="topo">
 			<div id="topoFlash">

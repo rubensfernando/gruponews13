@@ -25,7 +25,7 @@ function add_javascript_video() {
 }
 
 function special_loop() {?>
-	
+
 	<h1 class="post"><?php
 $terms = get_the_terms( $post->ID , 'audiosevideos' );
 foreach ( $terms as $term ) {
@@ -39,18 +39,17 @@ echo $term->name;
 		include (STYLESHEETPATH . '/functions-layout.php');
 	?>
 	<div <?php post_class('clearfix'); ?> >
-		<?php 
+		<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail('video-thumb');
-			} 
+			}
 		?>
 		<div class="details-info">
-			<h3 class="entry-title"><a href="<?php echo post_permalink(); ?>"> <?php the_title(); ?></a></h3>	
+			<h3 class="entry-title"><a href="<?php echo post_permalink(); ?>"> <?php the_title(); ?></a></h3>
 			<?php 
 				the_excerpt();	
 				$post_info = __( 'By', 'genesis' ) .' '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' | '.  get_the_term_list( $post->ID, 'tipo', ' ' ,', ') . ' [post_edit]';
 				printf( '<div class="post-info">%s</div>', apply_filters( 'genesis_post_info', $post_info ) );
-				
 			?>
 		</div>
 	</div>

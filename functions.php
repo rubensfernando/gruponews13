@@ -18,7 +18,29 @@ function my_mce_buttons_2($buttons) {
 add_filter('mce_buttons_2', 'my_mce_buttons_2');
 function my_mce_before_init($init_array) {
 	// Now we add classes with title and separate them with;
-	$init_array['theme_advanced_styles'] = "Notas=notes;PeBio=pebio";
+	$style_formats = array(
+		// Each array child is a format with it's own settings
+		array(
+			'title' => '.translation',
+			'block' => 'blockquote',
+			'classes' => 'translation',
+			'wrapper' => true,
+
+		),
+		array(
+			'title' => '⇠.rtl',
+			'block' => 'blockquote',
+			'classes' => 'rtl',
+			'wrapper' => true,
+		),
+		array(
+			'title' => '.ltr⇢',
+			'block' => 'blockquote',
+			'classes' => 'ltr',
+			'wrapper' => true,
+		),
+	);
+	$init_array['theme_advanced_styles'] = json_encode( $style_formats );
 	return $init_array;
 }
 add_filter('tiny_mce_before_init', 'my_mce_before_init');
@@ -38,7 +60,9 @@ function custom_favicon_filter( $favicon_url ) {
 function add_viewport_meta_tag() {
 	echo '<meta name="apple-mobile-web-app-capable" content="yes" />';
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>';
+    echo '<link href="http://fonts.googleapis.com/css?family=Lora:400,400italic,700" rel="stylesheet" type="text/css">';
     echo '<link rel="stylesheet" id="child-theme-css"  href='.get_stylesheet_uri().' type="text/css" media="all" />';
+    echo '<link rel="stylesheet" id="theme-css"  href="'.get_stylesheet_directory_uri().'/css/main.css" type="text/css" media="all" />';
 }
 add_action( 'genesis_footer', 'add_javascript' );
 function add_javascript() {
@@ -67,7 +91,7 @@ function themedy_post_carousel() {
 			if ( is_active_sidebar('top-featured-area') ) : ?>
 				<div id="featured_area">
 					<div class="wrap">
-						<?php dynamic_sidebar('Top Featured Area') ; ?> 
+						<?php dynamic_sidebar('Top Featured Area') ; ?>
 					</div>
 				</div>
 				<?php
@@ -93,7 +117,7 @@ add_filter('genesis_entry_header', 'add_content_featured');
 function add_content_featured() {
 	if ( !is_archive()) {
 		if ( has_post_thumbnail() ) {
-			if ( in_category( 'publicacoes' ) == true) {
+			if ( in_category( 'publicacoes' ) === true || in_category( 'jornal' ) === true || in_category( 'cds' ) === true || in_category( 'livros' ) === true) {
 				the_post_thumbnail('publicacoes');
 			} else {
 				the_post_thumbnail('materia');
@@ -116,8 +140,12 @@ function post_info_filter($post_info) {
 }
 add_filter( 'genesis_post_info', 'sp_post_info_filter' );
 function sp_post_info_filter($post_info) {
-	$post_info = 'Por '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' [post_edit]';
-	return $post_info;
+	if ( !is_page() &&  !is_post_type_archive('espresso_events') ) {
+		$post_info = 'Por <span itemprop="author">'.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .'</span> [post_edit]';
+		return $post_info;
+	} else {
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+	}
 }
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
@@ -127,6 +155,40 @@ function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+/*-------------------------------------------------*/
+// Archive page
+/*-------------------------------------------------*/
+
+//Add titles on page
+/**
+ * Auto-generate taxonomy title for archive pages
+ *
+ * Will say "[Term] Archives"
+ *
+ */
+add_action( 'genesis_before_loop', 'ac_do_taxonomy_title_description', 20 );
+function ac_do_taxonomy_title_description() {
+	global $wp_query;
+	if ( ! is_category() && ! is_tag() && ! is_tax() )
+		return;
+	if ( get_query_var( 'paged' ) >= 2 )
+		return;
+	$term = is_tax() ? get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ) : $wp_query->get_queried_object();
+	if ( ! $term || ! isset( $term->meta ) )
+		return;
+	$headline = '';
+	// If we have a headline already, then return, otherwise auto-generate
+	if ( $term->meta['headline'] )
+		return;
+	else {
+		$headline = sprintf( '<h1>%s</h1>', single_term_title( '', false ) );
+		$lead = sprintf( '<p class="lead">%s</p>', tag_description() );
+		printf( '<div class="taxonomy-description">%s %s</div>', $headline, $lead);
+	}
+}
+
 
 /*-------------------------------------------------*/
 // RSS
@@ -149,6 +211,7 @@ add_filter('the_content_feed', 'diw_post_thumbnail_feeds');
 
 add_filter('the_author', 'guest_author_name');
 add_filter('get_the_author_display_name', 'guest_author_name');
+add_filter('article_author_facebook', 'author_name_og');
 
 function guest_author_name($name) {
 	global $post;
@@ -157,11 +220,30 @@ function guest_author_name($name) {
 
 	return $name;
 }
+function author_name_og() {
+	if ( ! is_singular() ) {
+		return false;
+	}
 
+	global $post;
+	/**
+	 * Filter: 'wpseo_opengraph_author_facebook' - Allow developers to filter the WP SEO post authors facebook profile URL
+	 *
+	 * @api bool|string $unsigned The Facebook author URL, return false to disable
+	 */
+	//$facebook = apply_filters( 'wpseo_opengraph_author_facebook', get_the_author_meta( 'facebook', $post->post_author ) );
+	$facebook  = 'oi';
+	if ( $facebook && ( is_string( $facebook ) && $facebook !== '' ) ) {
+		$this->og_tag( 'article:author', $facebook );
+		return true;
+	}
+
+	return false;
+}
 // Add custom post-types on RSS Feed
 function myfeed_request($qv) {
 	if (isset($qv['feed']) && !isset($qv['post_type']))
-		$qv['post_type'] = array('post', 'audioevideo', 'event');
+		$qv['post_type'] = array('post', 'audioevideo', 'event','espresso_events');
 	return $qv;
 }
 add_filter('request', 'myfeed_request');
@@ -227,6 +309,15 @@ function excludecatfeed($query) {
 }
 //add_filter('pre_get_posts', 'excludecatfeed');
 
+add_filter( 'FHEE__EE_Register_CPTs__register_CPT__rewrite', 'my_custom_event_slug', 10, 2 );
+function my_custom_event_slug( $slug, $post_type ) {
+	if ( $post_type == 'espresso_events' ) {
+		$custom_slug = array( 'slug' => 'events' );
+		return $custom_slug;
+	}
+	return $slug;
+}
+
 /*-------------------------------------------------*/
 // Users Registration and Login pages
 /*-------------------------------------------------*/
@@ -237,7 +328,7 @@ function changeFields( $fields )
 {
 	$id = $fields['ID'];
 	$newDate = datasql($fields['dbem_bday']);
-	
+
 	update_user_meta( $id, 'dbem_bday', $newDate );
 }
 
@@ -255,21 +346,21 @@ function possibly_redirect(){
 	if( 'wp-login.php' == $pagenow ) {
 		wp_redirect(site_url('login', 'login'));
 		exit();
-	}	
+	}
 }
 //register url fix
 add_filter('register','fix_register_url');
 function fix_register_url($link){
     return str_replace(site_url('wp-login.php?action=register', 'login'),site_url('usuario/cadastro', 'login'),$link);
 }
- 
+
 //login url fix
 add_filter('login_url','fix_login_url');
 function fix_login_url($link){
     return str_replace(site_url('wp-login.php', 'login'),site_url('login', 'login'),$link);
 
 }
- 
+
 //forgot password url fix
 add_filter('lostpassword_url','fix_lostpass_url');
 function fix_lostpass_url($link){
@@ -282,7 +373,7 @@ function fix_urls($url, $path, $orig_scheme){
         return $url;
     if ($path == 'wp-login.php?action=register')
         return site_url('usuario/cadastro', 'login');
- 
+
     return $url;
 }
 */
@@ -333,28 +424,36 @@ add_action('wp_footer', 'wp_print_head_scripts', 1);
 
 add_filter( 'genesis_attr_body', 'change_schema' );
 function change_schema( $attributes ){
-        
+
 		$post_type = get_post_type( get_the_ID() );
 
         // if About page, use the AboutPage schema
         if( is_page( 'quem-somos' ) )
             $attributes['itemtype'] = 'http://schema.org/AboutPage';
-        
+
         // if Services page, use the ContactPage schema
         if( is_page( 'contato' ) )
             $attributes['itemtype'] = 'http://schema.org/ContactPage';
 
+        if (is_single() && !is_page()) {
+        	$attributes['itemtype'] = 'http://schema.org/Article';
+        }
+
+        if ( 'event' === $post_type || 'espresso_events' === $post_type) {
+        	//echo "teste: ".$post_type;
+        	$attributes['itemtype'] = 'http://schema.org/Events';
+        }
+
         return $attributes;
-        
+
 }
 
 add_filter( 'genesis_attr_entry', 'change_schema_events' );
 
 function change_schema_events( $attributes ) {
-
 	global $post;
-	if ( 'event' === $post->post_type ) {
-		$attributes['itemscope'] = 'itemscope';
+	if ( 'event' === $post->post_type || 'espresso_events' === $post->post_type) {
+		$attributes['itemscope'] = 'itemscope2';
 		$attributes['itemtype']  = 'http://schema.org/Events';
 
 		add_filter( 'genesis_attr_entry-title', function ($attributes) {
@@ -365,11 +464,8 @@ function change_schema_events( $attributes ) {
 			$attributes['itemprop'] = 'image';
 			return $attributes;
 		});
-
 	}
-
 	return $attributes;
-
 }
 
 
@@ -380,7 +476,7 @@ function modify_jquery() {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3');
 		wp_enqueue_script('jquery');
-		
+
 		wp_deregister_script('jquery-ui-core');
 		wp_register_script('jquery-ui-core', '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js', false, '1.9.2');
 		wp_enqueue_script('jquery-ui-core');
@@ -396,7 +492,7 @@ add_action('init', 'modify_jquery');
 
 	function of_print_styles() {
 		wp_register_style( 'custom-editor-style-css', get_stylesheet_directory_uri().'/admin/formatting-buttons/custom-editor-style.css' );
-		wp_enqueue_style( 'custom-editor-style-css' );	
+		wp_enqueue_style( 'custom-editor-style-css' );
 	}
 
 /*-------------------------------------------------*/
@@ -409,38 +505,38 @@ add_action('init', 'modify_jquery');
 // Shortcode CSS
 /*-------------------------------------------------*/
 
-	add_action('admin_enqueue_scripts', 'codes_admin_init');  
+add_action('admin_enqueue_scripts', 'codes_admin_init');
 
-	function codes_admin_init(){
+function codes_admin_init(){
 
-		global $current_screen;
-
-
-
-		if($current_screen->base=='post'){
-
-		//enqueue the script and CSS files for the TinyMCE editor formatting buttons
-
-			wp_enqueue_script('jquery');
-
-			wp_enqueue_script('jquery-ui-dialog');
-
-			wp_enqueue_script('jquery-ui-core');
-
-			wp_enqueue_script('jquery-ui-sortable');
+	global $current_screen;
 
 
 
-		//set the style files
+	if($current_screen->base=='post'){
 
-			add_editor_style('admin/formatting-buttons/custom-editor-style.css');
+	//enqueue the script and CSS files for the TinyMCE editor formatting buttons
 
-			wp_enqueue_style('page-style',get_stylesheet_directory_uri().'/css/page_style.css');
+		wp_enqueue_script('jquery');
 
-			wp_enqueue_style('jquery_ui_css',get_stylesheet_directory_uri().'/css/jquery-ui.css');
-		}
+		wp_enqueue_script('jquery-ui-dialog');
 
+		wp_enqueue_script('jquery-ui-core');
+
+		wp_enqueue_script('jquery-ui-sortable');
+
+
+
+	//set the style files
+
+		add_editor_style('admin/formatting-buttons/custom-editor-style.css');
+
+		wp_enqueue_style('page-style',get_stylesheet_directory_uri().'/css/page_style.css');
+
+		wp_enqueue_style('jquery_ui_css',get_stylesheet_directory_uri().'/css/jquery-ui.css');
 	}
+
+}
 
 
 /*-------------------------------------------------*/
@@ -457,21 +553,31 @@ add_image_size('publicacoes', 185, 204);
 // Widgets
 /*-------------------------------------------------*/
 genesis_register_sidebar(array(
-	'name' 			=> 'Top Featured Area', 
+	'name' 			=> 'Top Featured Area',
 	'id' 			=> 'top-featured-area',
-	'description' 	=> 'This is the top featured area above all content.', 
+	'description' 	=> 'This is the top featured area above all content.',
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' 	=> '</div>',
-	'before_title' 	=> '<h3>', 
+	'before_title' 	=> '<h3>',
 	'after_title' 	=> '</h3>'
 	));
 
 genesis_register_sidebar(array(
-	'name' 			=> 'Sidebar Home', 
+	'name' 			=> 'Sidebar Home',
 	'id' 			=> 'sidebar-home',
-	'description' 	=> 'Sidebar just show in homepage', 
+	'description' 	=> 'Sidebar just show in homepage',
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget' 	=> '</div>',
-	'before_title' 	=> '<h3>', 
+	'before_title' 	=> '<h3>',
+	'after_title' 	=> '</h3>'
+	));
+
+genesis_register_sidebar(array(
+	'name' 			=> 'Sidebar webtv',
+	'id' 			=> 'sidebar-webtv',
+	'description' 	=> 'Sidebar just show in homepage',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' 	=> '</div>',
+	'before_title' 	=> '<h3>',
 	'after_title' 	=> '</h3>'
 	));

@@ -19,3 +19,10 @@ js/.DS_Store
 images/.DS_Store
 
 .DS_Store
+
+/_project/
+/sftp-config.json
+
+/node_modules
+/gruponews.min.js
+

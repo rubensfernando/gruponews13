@@ -25,7 +25,7 @@ function add_javascript_video() {
 }
 
 function special_loop() {?>
-	
+
 	<h1 class="post"><?php post_type_archive_title(); ?></h1>
 
 	<?php
@@ -40,12 +40,12 @@ function special_loop() {?>
 			} 
 		?>
 		<div class="details-info">
-			<h3 class="entry-title"><a href="<?php echo post_permalink(); ?>"> <?php the_title(); ?></a></h3>	
-			<?php 
-				the_excerpt();	
+			<p class="kicker"><?php $resource = get_the_term_list( $post->ID, 'audiosevideos', ' ' ,', '); echo $resource; ?></p>
+			<h3 class="entry-title"><a href="<?php echo post_permalink(); ?>"> <?php the_title(); ?></a></h3>
+			<?php
+				the_excerpt();
 				$post_info = __( 'By', 'genesis' ) .' '.  get_the_term_list( $post->ID, 'autor', ' ' ,', ') .' | '.  get_the_term_list( $post->ID, 'tipo', ' ' ,', ') . ' [post_edit]';
 				printf( '<div class="post-info">%s</div>', apply_filters( 'genesis_post_info', $post_info ) );
-				
 			?>
 		</div>
 	</div>
