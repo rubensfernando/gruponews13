@@ -38,6 +38,20 @@ module.exports = function(grunt) {
                 tasks: ['sass:dev']
             }
         },
+        buildcontrol: {
+            options: {
+                dir: 'dist',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            producao: {
+                options: {
+                    remote: 'ssh://gruponews@gruponews.com.br/~/public_html/site/wp-content/themes/gruponews13/',
+                    branch: 'master'
+                }
+            }
+        }
 
     });
 
@@ -46,6 +60,6 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['uglify:build', 'sass:dist']);
+    grunt.registerTask('build', ['uglify:build', 'sass:dist', 'buildcontrol:producao']);
 
 };
